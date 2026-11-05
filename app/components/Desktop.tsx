@@ -1,6 +1,8 @@
 'use client'
 import { useRef, useEffect } from "react";
 
+import Taskbar from "./Taskbar";
+
 interface RainDrop {
     x: number;
     y: number;
@@ -134,11 +136,11 @@ export default function Desktop() {
     }, [])
 
     return (
-        <main className="relative w-full h-screen overflow-hidden bg-slate-900">
+        <main className="relative w-full h-screen overflow-hidden bg-slate-900 cursor-crosshair">
             <canvas
                 ref={canvasRef}
                 className="absolute top-0 left-0 w-full h-full"
-                style={{ zIndex: 0, cursor: 'crosshair' }}
+                style={{ zIndex: 0 }}
 
             />
             <div
@@ -147,6 +149,7 @@ export default function Desktop() {
             >
 
             </div>
+            <Taskbar />
         </main>
     )
 }
