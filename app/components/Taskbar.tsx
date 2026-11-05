@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import StartMenu from "./StartMenu";   // ← import komponen baru
+import StartMenu from "./Startmenu";   // ← import komponen baru
 
 type StartState = 'default' | 'transition' | 'open';
 const STATES: StartState[] = ['default', 'transition', 'open'];
