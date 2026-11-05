@@ -7,7 +7,7 @@ import StartMenu from "./Startmenu";   // ← import komponen baru
 type StartState = 'default' | 'transition' | 'open';
 const STATES: StartState[] = ['default', 'transition', 'open'];
 
-export default function Taskbar() {
+export default function Taskbdsfipsdfar() {
     const [startState, setStartState] = useState<StartState>('default');
     const [menuOpen, setMenuOpen] = useState(false);
     const startButtonRef = useRef<HTMLButtonElement>(null)  // ← ref tombol start
