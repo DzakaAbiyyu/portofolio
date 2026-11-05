@@ -35,7 +35,7 @@ export default function Taskbdsfipsdfar() {
                 <button
                     ref={startButtonRef}
                     aria-label="start"
-                    className="relative w-10 h-10 cursor-crosshair hover:bg-white/10 flex items-center justify-center rounded"
+                    className="relative w-10 h-10 cursor-crosshair active:scale-75 transition-transform duration-100 hover:bg-white/10 flex items-center justify-center rounded transition-[transform,background-color] duration-100 active:scale-75 active:bg-transparent"
                     onMouseEnter={() => {
                         if (!menuOpen) setStartState('transition');
                     }}
@@ -61,14 +61,14 @@ export default function Taskbdsfipsdfar() {
                 <Link
                     href="/github"
                     aria-label="github"
-                    className="flex items-center justify-center w-10 h-10 rounded hover:bg-white/10 cursor-crosshair"
+                    className="flex items-center justify-center w-10 h-10 rounded active:scale-75 transition-transform duration-100 hover:bg-white/10 cursor-crosshair transition-[transform,background-color] duration-100 active:scale-75 active:bg-transparent"
                 >
                     <Image
                         src="/icon/github-icon/default.png"
                         alt=""
                         width={48}
                         height={48}
-                        className="!w-7 !h-7 object-contain invert"
+                        className="!w-7 !h-7 object-contain invert "
                         style={{ imageRendering: 'pixelated' }}
                     />
                 </Link>
@@ -77,7 +77,7 @@ export default function Taskbdsfipsdfar() {
                 <Link
                     href="/vscode"
                     aria-label="vscode"
-                    className="flex items-center justify-center w-10 h-10 rounded hover:bg-white/10 cursor-crosshair"
+                    className="flex items-center justify-center w-10 h-10 rounded active:scale-75 transition-transform duration-100 hover:bg-white/10 cursor-crosshair transition-[transform,background-color] duration-100 active:scale-75 active:bg-transparent"
                 >
                     <Image
                         src="/icon/vscode-icon/default.png"
@@ -93,7 +93,7 @@ export default function Taskbdsfipsdfar() {
                 <Link
                     href="/photos"
                     aria-label="photos"
-                    className="flex items-center justify-center w-10 h-10 rounded hover:bg-white/10 cursor-crosshair"
+                    className="flex items-center justify-center w-10 h-10 rounded active:scale-75 transition-transform duration-100 hover:bg-white/10 cursor-crosshair transition-[transform,background-color] duration-100 active:scale-75 active:bg-transparent"
                 >
                     <Image
                         src="/icon/photos-icon/default.png"
