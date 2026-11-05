@@ -2,20 +2,19 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-type StartState = 'default' | 'transition' | 'open'
-const STATES: StartState[] = ['default', 'transition', 'open']
+type StartState = 'default' | 'transition' | 'open';
+const STATES: StartState[] = ['default', 'transition', 'open'];
 
 export default function Taskbar() {
-    const [startState, setStartState] = useState<StartState>('default')
+    const [startState, setStartState] = useState<StartState>('default');
 
     return (
         <footer className="fixed bottom-0 w-full h-12 bg-gray-800 text-white flex items-center justify-center">
             <button
                 aria-label="start"
-                className="relative w-12 h-12 cursor-crosshair"
+                className="relative w-10 h-10 cursor-crosshair hover:bg-white/10 flex items-center justify-center rounded"
                 onMouseEnter={() => {
-                    console.log('enter')
-                    setStartState(prev => prev === 'open' ? 'open' : 'transition')
+                    setStartState(prev => prev === 'open' ? 'open' : 'transition');
                 }}
                 onMouseLeave={() => setStartState(prev => prev === 'open' ? 'open' : 'default')}
                 onClick={() => setStartState(prev => prev === 'open' ? 'transition' : 'open')}
@@ -25,16 +24,13 @@ export default function Taskbar() {
                         key={state}
                         src={`/icon/windows-icon/${state}.png`}
                         alt=""
-                        width={48}
-                        height={48}
+                        width={56}
+                        height={56}
                         priority
-                        className={`absolute inset-0 !w-12 !h-12 object-contain transition-opacity duration-200 ${startState === state ? 'opacity-100' : 'opacity-0'
+                        className={`absolute !w-7 !h-7 object-contain transition-opacity duration-200 ${startState === state ? 'opacity-100' : 'opacity-0'
                             }`}
                     />
-
-                )
-
-                )}
+                ))}
             </button>
             <Link
                 href="/github"
@@ -49,7 +45,6 @@ export default function Taskbar() {
                     className="!w-7 !h-7 object-contain invert"
                     style={{ imageRendering: 'pixelated' }}
                 />
-
             </Link>
             <Link
                 href="/vscode"
@@ -61,10 +56,9 @@ export default function Taskbar() {
                     alt=""
                     width={48}
                     height={48}
-                    className="!w-7 !h-7 object-contain "
+                    className="!w-7 !h-7 object-contain"
                     style={{ imageRendering: 'pixelated' }}
                 />
-
             </Link>
             <Link
                 href="/photos"
@@ -76,11 +70,10 @@ export default function Taskbar() {
                     alt=""
                     width={48}
                     height={48}
-                    className="!w-7 !h-7 object-contain "
+                    className="!w-7 !h-7 object-contain"
                     style={{ imageRendering: 'pixelated' }}
                 />
-
             </Link>
-        </footer >
-    )
+        </footer>
+    );
 }
